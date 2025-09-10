@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { 
   Shield, 
   GraduationCap, 
@@ -18,37 +19,43 @@ const ServicesSection = () => {
       title: "Term Life Insurance",
       description: "Maximum protection at minimum cost. Pure life insurance coverage for your family's security.",
       features: ["High coverage amount", "Affordable premiums", "Tax benefits under 80C", "Flexible payment options"],
-      popular: true
+      popular: true,
+      link: "/term-life-plans"
     },
     {
       icon: <PiggyBank className="w-8 h-8 text-gold" />,
       title: "Endowment Plans",
       description: "Perfect blend of protection and savings. Guaranteed returns with life insurance benefits.",
-      features: ["Life cover + savings", "Guaranteed maturity benefits", "Bonus additions", "Loan facility"]
+      features: ["Life cover + savings", "Guaranteed maturity benefits", "Bonus additions", "Loan facility"],
+      link: "/endowment-plans"
     },
     {
       icon: <GraduationCap className="w-8 h-8 text-gold" />,
       title: "Child Education Plans",
       description: "Secure your child's bright future with education-focused insurance and investment plans.",
-      features: ["Education fund creation", "Waiver of premium benefit", "Flexible payout options", "Market-linked returns"]
+      features: ["Education fund creation", "Waiver of premium benefit", "Flexible payout options", "Market-linked returns"],
+      link: "/child-plans"
     },
     {
       icon: <Users className="w-8 h-8 text-gold" />,
       title: "Retirement Planning",
       description: "Build a comfortable retirement corpus with annuity and pension plans designed for golden years.",
-      features: ["Regular income post-retirement", "Inflation-beating returns", "Spouse pension options", "Tax-efficient growth"]
+      features: ["Regular income post-retirement", "Inflation-beating returns", "Spouse pension options", "Tax-efficient growth"],
+      link: "/retirement-plans"
     },
     {
       icon: <Heart className="w-8 h-8 text-gold" />,
       title: "Health Insurance",
       description: "Comprehensive health coverage for you and your family's medical expenses and emergencies.",
-      features: ["Cashless hospitalization", "Pre & post hospitalization", "Critical illness cover", "Family floater options"]
+      features: ["Cashless hospitalization", "Pre & post hospitalization", "Critical illness cover", "Family floater options"],
+      link: "/health-plans"
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-gold" />,
       title: "Investment Plans",
       description: "Market-linked insurance plans (ULIPs) offering investment growth with insurance protection.",
-      features: ["Market-linked returns", "Fund switching facility", "Partial withdrawals", "Top-up premium options"]
+      features: ["Market-linked returns", "Fund switching facility", "Partial withdrawals", "Top-up premium options"],
+      link: "/investment-plans"
     }
   ];
 
@@ -105,13 +112,15 @@ const ServicesSection = () => {
                 ))}
               </ul>
               
-              <Button 
-                variant="outline" 
-                className="w-full border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300 group"
-              >
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to={service.link}>
+                <Button 
+                  variant="outline" 
+                  className="w-full border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300 group"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </Card>
           ))}
         </div>
