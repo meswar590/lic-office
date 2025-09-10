@@ -9,6 +9,7 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  // Professional LIC Agent Website - Complete Solution
   return (
     <div className="min-h-screen">
       <Navigation />
