@@ -10,7 +10,7 @@ import TermLifePlans from "./pages/TermLifePlans";
 import ChildPlans from "./pages/ChildPlans";
 import EndowmentPlans from "./pages/EndowmentPlans";
 import RetirementPlans from "./pages/RetirementPlans";
-import HealthPlans from "./pages/HealthPlans";
+
 import InvestmentPlans from "./pages/InvestmentPlans";
 
 const queryClient = new QueryClient();
@@ -28,7 +28,7 @@ const App = () => (
           <Route path="/child-plans" element={<ChildPlans />} />
           <Route path="/endowment-plans" element={<EndowmentPlans />} />
           <Route path="/retirement-plans" element={<RetirementPlans />} />
-          <Route path="/health-plans" element={<HealthPlans />} />
+          
           <Route path="/investment-plans" element={<InvestmentPlans />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

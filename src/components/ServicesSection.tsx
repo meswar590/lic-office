@@ -6,7 +6,6 @@ import {
   Shield, 
   GraduationCap, 
   PiggyBank, 
-  Heart, 
   TrendingUp, 
   Users,
   ArrowRight
@@ -42,13 +41,6 @@ const ServicesSection = () => {
       description: "Build a comfortable retirement corpus with annuity and pension plans designed for golden years.",
       features: ["Regular income post-retirement", "Inflation-beating returns", "Spouse pension options", "Tax-efficient growth"],
       link: "/retirement-plans"
-    },
-    {
-      icon: <Heart className="w-8 h-8 text-gold" />,
-      title: "Health Insurance",
-      description: "Comprehensive health coverage for you and your family's medical expenses and emergencies.",
-      features: ["Cashless hospitalization", "Pre & post hospitalization", "Critical illness cover", "Family floater options"],
-      link: "/health-plans"
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-gold" />,
