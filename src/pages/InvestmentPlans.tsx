@@ -147,13 +147,6 @@ const InvestmentPlans = () => {
                     <h4 className="font-semibold text-navy text-sm mb-2">Suitable For:</h4>
                     <p className="text-sm text-navy/70">{strategy.suitableFor}</p>
                   </div>
-                  
-                  <Button 
-                    className="w-full bg-navy hover:bg-navy/90 text-white"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
-                    Learn More
-                  </Button>
                 </Card>
               ))}
             </div>

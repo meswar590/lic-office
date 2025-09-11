@@ -172,13 +172,6 @@ const RetirementPlans = () => {
                       </div>
                     ))}
                   </div>
-                  
-                  <Button 
-                    className="w-full bg-navy hover:bg-navy/90 text-white"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
-                    Get Retirement Plan
-                  </Button>
                 </Card>
               ))}
             </div>
