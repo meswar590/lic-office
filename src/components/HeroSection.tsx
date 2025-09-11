@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Phone, Award, Users, Calendar } from 'lucide-react';
-import agentPhoto from '@/assets/lic-agent-photo.jpg';
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -88,7 +87,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="relative w-80 h-96 md:w-96 md:h-[480px] rounded-2xl overflow-hidden shadow-hero">
                 <img 
-                  src={agentPhoto} 
+                  src="/lovable-uploads/692ae274-6920-4f39-bb94-d9d0187b22cf.png" 
                   alt="Professional LIC Agent - 30+ Years Experience" 
                   className="w-full h-full object-cover"
                 />
