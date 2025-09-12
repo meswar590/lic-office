@@ -84,9 +84,10 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
                 <div className="text-white/80 text-sm">
-                  LIC Branch Office<br />
-                  Main Road, Chimakurthy<br />
-                  Prakasam District, AP
+                  LIC office by Maddali Sreehari<br />
+                  Siddha Complex, Opposite to Police station<br />
+                  Main road, Chimakurthy<br />
+                  Prakasam District, AP 523226
                 </div>
               </div>
               <div className="flex items-center gap-3">

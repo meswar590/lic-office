@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone } from 'lucide-react';
+import licLogo from '@/assets/lic-logo.jpg';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,8 +38,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-navy rounded-full flex items-center justify-center">
-              <span className="text-gold font-bold text-lg">LIC</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden">
+              <img src={licLogo} alt="LIC Logo" className="w-full h-full object-cover" />
             </div>
             <div className={`font-bold ${isScrolled ? 'text-navy' : 'text-white'}`}>
               <div className="text-lg">Trusted LIC Agent</div>
