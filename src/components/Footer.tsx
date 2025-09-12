@@ -20,8 +20,12 @@ const Footer = () => {
           {/* About Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                <span className="text-navy font-bold text-lg">LIC</span>
+              <div className="w-20 h-20">
+                <img 
+                  src="/lic-logo.jpg" 
+                  alt="LIC Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <div className="font-bold text-lg">Your Trusted LIC Agent</div>

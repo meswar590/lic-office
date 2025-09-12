@@ -38,7 +38,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-white rounded-lg overflow-hidden flex items-center justify-center p-1">
+            <div className="w-16 h-16">
               <img src={licLogo} alt="LIC Logo" className="w-full h-full object-contain" />
             </div>
             <div className={`font-bold ${isScrolled ? 'text-navy' : 'text-white'}`}>
