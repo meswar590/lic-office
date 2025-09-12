@@ -45,7 +45,7 @@ const ContactSection = () => {
 
   const openWhatsApp = () => {
     const message = `Hello! I'm interested in LIC policies and would like to discuss my insurance needs.`;
-    window.open(`https://wa.me/919876543210?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/919248426946?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
@@ -93,11 +93,8 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-navy mb-1">Phone</h4>
                   <p className="text-navy/70">
-                    <a href="tel:+919876543210" className="hover:text-gold transition-colors">
-                      +91 98765 43210
-                    </a><br />
-                    <a href="tel:+918765432109" className="hover:text-gold transition-colors">
-                      +91 87654 32109
+                    <a href="tel:+919248426946" className="hover:text-gold transition-colors">
+                      +91 92484 26946
                     </a>
                   </p>
                 </div>
@@ -111,8 +108,8 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-navy mb-1">Email</h4>
                   <p className="text-navy/70">
-                    <a href="mailto:licagent@example.com" className="hover:text-gold transition-colors">
-                      licagent@example.com
+                    <a href="mailto:eswar.investments@gmail.com" className="hover:text-gold transition-colors">
+                      eswar.investments@gmail.com
                     </a>
                   </p>
                 </div>
@@ -145,7 +142,7 @@ const ContactSection = () => {
                   <Instagram className="w-6 h-6 text-white" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://youtube.com/@eswar_maddali?si=NctORLDLkYVBn-V-" 
                   className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
                   title="YouTube"
                 >
@@ -190,7 +187,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="border-navy/20 focus:border-gold"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 92484 26946"
                     />
                   </div>
                 </div>
@@ -203,7 +200,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="border-navy/20 focus:border-gold"
-                    placeholder="your.email@example.com"
+                    placeholder="eswar.investments@gmail.com"
                   />
                 </div>
                 

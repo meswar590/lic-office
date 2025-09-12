@@ -113,21 +113,33 @@ const AchievementsSection = () => {
         {/* Recognition Gallery */}
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-card">
           <h3 className="text-2xl font-bold text-navy text-center mb-8">Recognition Gallery</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            {[
+              { src: "/recognition/award-1.jpg", alt: "Award Recognition Ceremony" },
+              { src: "/recognition/award-2.jpg", alt: "LIC Achievement Award" },
+              { src: "/recognition/award-3.jpg", alt: "Award Ceremony with Officials" },
+              { src: "/recognition/award-4.jpg", alt: "MDRT-23 Achievement" },
+              { src: "/recognition/award-5.jpg", alt: "Dussehra Diwali Meet Award" },
+              { src: "/recognition/award-6.jpg", alt: "LIC Branch Recognition" },
+              { src: "/recognition/award-7.jpg", alt: "1 Crore Premium Achievement" },
+              { src: "/recognition/award-8.jpg", alt: "Branch Award Recognition" },
+              { src: "/recognition/award-9.jpg", alt: "Quarterly Achievement Award" },
+              { src: "/recognition/award-10.jpg", alt: "Office Recognition Event" }
+            ].map((award, index) => (
               <div 
-                key={item} 
-                className="aspect-square bg-gradient-to-br from-navy/10 to-gold/10 rounded-lg flex items-center justify-center group hover:shadow-card transition-all duration-300 cursor-pointer"
+                key={index} 
+                className="aspect-square rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105"
               >
-                <div className="text-center">
-                  <Award className="w-8 h-8 text-navy/50 mx-auto mb-2 group-hover:text-gold transition-colors" />
-                  <span className="text-xs text-navy/70">Award {item}</span>
-                </div>
+                <img 
+                  src={award.src} 
+                  alt={award.alt}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
             ))}
           </div>
-          <p className="text-center text-navy/60 text-sm mt-4">
-            Click on any award to view the certificate and details
+          <p className="text-center text-navy/60 text-sm mt-6">
+            30+ Years of Excellence - Awards and Recognition from LIC India
           </p>
         </div>
       </div>

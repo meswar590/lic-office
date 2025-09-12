@@ -60,7 +60,7 @@ const Navigation = () => {
               </button>
             ))}
             <Button
-              onClick={() => window.open('tel:+919876543210', '_self')}
+              onClick={() => window.open('tel:+919248426946', '_self')}
               className="bg-gold hover:bg-gold-dark text-navy font-semibold px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105"
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -93,7 +93,7 @@ const Navigation = () => {
                 </button>
               ))}
               <Button
-                onClick={() => window.open('tel:+919876543210', '_self')}
+                onClick={() => window.open('tel:+919248426946', '_self')}
                 className="bg-gold hover:bg-gold-dark text-navy font-semibold mt-2"
               >
                 <Phone className="w-4 h-4 mr-2" />

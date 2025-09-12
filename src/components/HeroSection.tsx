@@ -63,19 +63,27 @@ const HeroSection = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                onClick={scrollToContact}
-                size="lg" 
-                className="bg-gold hover:bg-gold-dark text-navy font-semibold px-8 py-3 rounded-lg shadow-gold transition-all duration-300 hover:scale-105"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Get In Touch
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-2 items-center">
+                <Button 
+                  onClick={scrollToContact}
+                  size="lg" 
+                  className="bg-gold hover:bg-gold-dark text-navy font-semibold px-8 py-3 rounded-lg shadow-gold transition-all duration-300 hover:scale-105"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Get In Touch
+                </Button>
+                <a 
+                  href="tel:+919248426946" 
+                  className="text-gold font-bold text-lg hover:text-gold-dark transition-colors"
+                >
+                  +91 92484 26946
+                </a>
+              </div>
               <Button 
                 variant="outline" 
                 size="lg"
                 className="border-2 border-white text-white hover:bg-white hover:text-navy font-semibold px-8 py-3 rounded-lg transition-all duration-300"
-                onClick={() => window.open('https://wa.me/919876543210', '_blank')}
+                onClick={() => window.open('https://wa.me/919248426946', '_blank')}
               >
                 WhatsApp Chat
               </Button>

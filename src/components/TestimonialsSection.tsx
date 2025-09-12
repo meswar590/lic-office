@@ -134,7 +134,7 @@ const TestimonialsSection = () => {
             </button>
             <button 
               className="border-2 border-white text-white hover:bg-white hover:text-navy font-semibold px-8 py-3 rounded-lg transition-all duration-300"
-              onClick={() => window.open('https://wa.me/919876543210?text=Hello, I would like to know more about LIC policies', '_blank')}
+              onClick={() => window.open('https://wa.me/919248426946?text=Hello, I would like to know more about LIC policies', '_blank')}
             >
               WhatsApp Me Now
             </button>

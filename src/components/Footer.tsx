@@ -91,14 +91,14 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-gold" />
-                <a href="tel:+919876543210" className="text-white/80 hover:text-gold transition-colors text-sm">
-                  +91 98765 43210
+                <a href="tel:+919248426946" className="text-white/80 hover:text-gold transition-colors text-sm">
+                  +91 92484 26946
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold" />
-                <a href="mailto:licagent@example.com" className="text-white/80 hover:text-gold transition-colors text-sm">
-                  licagent@example.com
+                <a href="mailto:eswar.investments@gmail.com" className="text-white/80 hover:text-gold transition-colors text-sm">
+                  eswar.investments@gmail.com
                 </a>
               </div>
             </div>
@@ -115,14 +115,14 @@ const Footer = () => {
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://youtube.com/@eswar_maddali?si=NctORLDLkYVBn-V-" 
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all duration-300"
                   title="YouTube"
                 >
                   <Youtube className="w-5 h-5" />
                 </a>
                 <button
-                  onClick={() => window.open('https://wa.me/919876543210', '_blank')}
+                  onClick={() => window.open('https://wa.me/919248426946', '_blank')}
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all duration-300"
                   title="WhatsApp"
                 >

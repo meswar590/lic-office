@@ -162,7 +162,7 @@ const RetirementPlans = () => {
               <Button 
                 size="lg"
                 className="bg-gold hover:bg-gold-dark text-navy font-semibold px-8 py-3 rounded-lg shadow-gold transition-all duration-300 hover:scale-105"
-                onClick={() => window.location.href = 'tel:+919876543210'}
+                onClick={() => window.location.href = 'tel:+919248426946'}
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Free Retirement Consultation
@@ -171,7 +171,7 @@ const RetirementPlans = () => {
                 variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-navy"
-                onClick={() => window.location.href = 'https://wa.me/919876543210?text=Hi, I need help with retirement planning'}
+                onClick={() => window.location.href = 'https://wa.me/919248426946?text=Hi, I need help with retirement planning'}
               >
                 WhatsApp Now
               </Button>
