@@ -14,6 +14,7 @@ import {
   Send
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -24,16 +25,45 @@ const ContactSection = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message Sent Successfully!",
-      description: "Thank you for reaching out. I'll get back to you within 24 hours.",
-    });
     
-    // Reset form
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    // EmailJS configuration
+    const serviceId = 'service_iukembw';
+    const templateId = 'template_pj57gyo';
+    const publicKey = 'Y72sFnnf56xkkZC1u';
+    
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          to_email: 'eswar.investments@gmail.com', // Your email address
+        },
+        publicKey
+      );
+      
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Error Sending Message",
+        description: "There was an error sending your message. Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
