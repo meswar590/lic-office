@@ -140,9 +140,8 @@ const TermLifePlans = () => {
                 Call Now for Free Consultation
               </Button>
               <Button 
-                variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-navy"
+                className="bg-white text-navy font-semibold px-8 py-3 rounded-lg hover:bg-white hover:text-navy hover:scale-105 transition-all duration-200"
                 onClick={() => window.location.href = 'https://wa.me/919248426946?text=Hi, I want to know more about Term Insurance plans'}
               >
                 WhatsApp Now
