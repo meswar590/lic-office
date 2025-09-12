@@ -38,8 +38,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full overflow-hidden">
-              <img src={licLogo} alt="LIC Logo" className="w-full h-full object-cover" />
+            <div className="w-12 h-12 bg-white rounded-lg overflow-hidden flex items-center justify-center p-1">
+              <img src={licLogo} alt="LIC Logo" className="w-full h-full object-contain" />
             </div>
             <div className={`font-bold ${isScrolled ? 'text-navy' : 'text-white'}`}>
               <div className="text-lg">Trusted LIC Agent</div>

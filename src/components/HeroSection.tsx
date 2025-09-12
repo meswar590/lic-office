@@ -102,14 +102,6 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent"></div>
               </div>
               
-              
-              {/* Floating Experience Badge */}
-              <div className="absolute -top-6 -right-6 bg-gold rounded-xl p-4 shadow-gold">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-navy">30+</div>
-                  <div className="text-sm text-navy/80">Years Exp.</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
