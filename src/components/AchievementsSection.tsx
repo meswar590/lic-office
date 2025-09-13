@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Trophy, Award, Medal, Star, Crown, Target } from 'lucide-react';
 import postalStampAward from '@/assets/postal-stamp-award.jpg';
+import chairmanAward from '@/assets/chairman-award.jpg';
 
 const AchievementsSection = () => {
   const achievements = [
@@ -111,15 +112,17 @@ const AchievementsSection = () => {
           ))}
         </div>
 
-        {/* Special Achievement - Postal Stamp Honor */}
-        <div className="mb-12">
+        {/* Lifetime Achievements */}
+        <div className="mb-12 space-y-8">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-navy mb-2">Lifetime Achievements</h3>
+            <div className="w-20 h-1 bg-gold mx-auto"></div>
+          </div>
+
+          {/* Postal Stamp Honor */}
           <Card className="relative overflow-hidden bg-gradient-to-br from-gold/20 via-white/95 to-navy/10 backdrop-blur-sm shadow-hero border-2 border-gold/30">
             <div className="absolute inset-0 bg-gradient-to-r from-gold/10 to-transparent"></div>
             <div className="relative p-8">
-              <div className="text-center mb-6">
-                <h3 className="text-3xl font-bold text-navy mb-2">Lifetime Achievement</h3>
-                <div className="w-16 h-1 bg-gold mx-auto"></div>
-              </div>
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-1/2">
                   <div className="relative group">
@@ -143,6 +146,40 @@ const AchievementsSection = () => {
                     </p>
                     <div className="inline-block bg-gradient-to-r from-gold to-navy text-white px-6 py-2 rounded-full text-sm font-semibold">
                       Lifetime Achievement
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          {/* LIC Chairman Recognition */}
+          <Card className="relative overflow-hidden bg-gradient-to-br from-navy/20 via-white/95 to-gold/10 backdrop-blur-sm shadow-hero border-2 border-navy/30">
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/10 to-transparent"></div>
+            <div className="relative p-8">
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="lg:w-1/2">
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-navy/20 to-gold/20 rounded-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
+                    <div className="relative bg-white p-3 rounded-2xl shadow-hero">
+                      <img 
+                        src={chairmanAward}
+                        alt="LIC Chairman Recognition - Maddali Sreehari with Shri M. R. Kumar"
+                        className="w-full h-auto rounded-xl object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:w-1/2 text-center lg:text-left">
+                  <div className="mb-6">
+                    <Award className="w-16 h-16 text-navy mx-auto lg:mx-0 mb-4" />
+                    <h4 className="text-2xl font-bold text-navy mb-3">Honored by LIC Chairman</h4>
+                    <p className="text-lg text-navy font-semibold mb-4">Personal Recognition</p>
+                    <p className="text-navy/80 leading-relaxed mb-6">
+                      A proud moment as Maddali Sreehari was honored and personally recognized by LIC Chairman Shri M. R. Kumar for his remarkable achievements.
+                    </p>
+                    <div className="inline-block bg-gradient-to-r from-navy to-gold text-white px-6 py-2 rounded-full text-sm font-semibold">
+                      Chairman's Honor
                     </div>
                   </div>
                 </div>
