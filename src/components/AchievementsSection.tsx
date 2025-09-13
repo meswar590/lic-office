@@ -1,56 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Trophy, Award, Medal, Star, Crown, Target } from 'lucide-react';
-import postalStampAward from '@/assets/postal-stamp-award.jpg';
-import chairmanAward from '@/assets/chairman-award.jpg';
-import zonalManagerAward from '@/assets/zonal-manager-award.jpg';
 
 const AchievementsSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const lifetimeAchievements = [
-    {
-      icon: <Crown className="w-16 h-16 text-gold" />,
-      title: "Featured on Indian Postal Stamp",
-      subtitle: "A Rare National Honor",
-      description: "Celebrating the rare honor of being featured on an Indian Postal Stamp.",
-      badge: "Lifetime Achievement",
-      image: postalStampAward,
-      alt: "Indian Postal Stamp Honor - Lifetime Achievement",
-      gradient: "from-gold/20 via-white/95 to-navy/10",
-      borderColor: "border-gold/30"
-    },
-    {
-      icon: <Award className="w-16 h-16 text-navy" />,
-      title: "Honored by LIC Chairman",
-      subtitle: "Personal Recognition",
-      description: "A proud moment as Maddali Sreehari was honored and personally recognized by LIC Chairman Shri M. R. Kumar for his remarkable achievements.",
-      badge: "Chairman's Honor",
-      image: chairmanAward,
-      alt: "LIC Chairman Recognition - Maddali Sreehari with Shri M. R. Kumar",
-      gradient: "from-navy/20 via-white/95 to-gold/10",
-      borderColor: "border-navy/30"
-    },
-    {
-      icon: <Target className="w-16 h-16 text-gold" />,
-      title: "Zonal Manager Recognition",
-      subtitle: "10× MDRT Achievement",
-      description: "Honored by Zonal Manager Shri Jagannatham for achieving 10× MDRT – a milestone of excellence in the insurance industry.",
-      badge: "Excellence Milestone",
-      image: zonalManagerAward,
-      alt: "Zonal Manager Recognition - Honored by Shri Jagannatham for 10× MDRT achievement",
-      gradient: "from-gold/15 via-white/95 to-navy/15",
-      borderColor: "border-gold/20"
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % lifetimeAchievements.length);
-    }, 2000);
-
-    return () => clearInterval(timer);
-  }, [lifetimeAchievements.length]);
 
   const achievements = [
     {
@@ -159,78 +111,6 @@ const AchievementsSection = () => {
           ))}
         </div>
 
-        {/* Lifetime Achievements Slideshow */}
-        <div className="mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-navy mb-2">Lifetime Achievements</h3>
-            <div className="w-20 h-1 bg-gold mx-auto"></div>
-          </div>
-
-          {/* Slideshow Container */}
-          <div className="relative overflow-hidden rounded-2xl">
-            {lifetimeAchievements.map((achievement, index) => (
-              <Card 
-                key={index}
-                className={`relative overflow-hidden bg-gradient-to-br ${achievement.gradient} backdrop-blur-sm shadow-hero border-2 ${achievement.borderColor} transition-all duration-700 ease-in-out ${
-                  index === currentSlide 
-                    ? 'opacity-100 translate-x-0' 
-                    : index < currentSlide 
-                      ? 'opacity-0 -translate-x-full absolute inset-0' 
-                      : 'opacity-0 translate-x-full absolute inset-0'
-                }`}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-gold/10 to-transparent"></div>
-                <div className="relative p-8">
-                  <div className="flex flex-col lg:flex-row items-center gap-8">
-                    <div className="lg:w-1/2">
-                      <div className="relative group">
-                        <div className={`absolute inset-0 bg-gradient-to-r ${achievement.gradient.replace('via-white/95', 'via-transparent')} rounded-2xl transform ${index % 2 === 0 ? 'rotate-1 group-hover:rotate-2' : '-rotate-1 group-hover:-rotate-2'} transition-transform duration-300`}></div>
-                        <div className="relative bg-white p-3 rounded-2xl shadow-hero">
-                          <img 
-                            src={achievement.image}
-                            alt={achievement.alt}
-                            className="w-full h-auto rounded-xl object-cover"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="lg:w-1/2 text-center lg:text-left">
-                      <div className="mb-6">
-                        <div className="mx-auto lg:mx-0 mb-4 w-16 h-16 flex items-center justify-center">
-                          {achievement.icon}
-                        </div>
-                        <h4 className="text-2xl font-bold text-navy mb-3">{achievement.title}</h4>
-                        <p className="text-lg font-semibold mb-4 text-gold">{achievement.subtitle}</p>
-                        <p className="text-navy/80 leading-relaxed mb-6">
-                          {achievement.description}
-                        </p>
-                        <div className="inline-block bg-gradient-to-r from-gold to-navy text-white px-6 py-2 rounded-full text-sm font-semibold">
-                          {achievement.badge}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center mt-6 gap-2">
-            {lifetimeAchievements.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-gold scale-125' 
-                    : 'bg-navy/30 hover:bg-navy/50'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
 
         {/* Recognition Gallery */}
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-card">
