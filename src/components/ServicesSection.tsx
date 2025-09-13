@@ -52,16 +52,16 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-blue-900">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Comprehensive LIC
             <span className="block text-gold">Insurance Solutions</span>
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
-          <p className="text-xl text-navy/70 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
             From life protection to wealth creation, discover the perfect LIC policy 
             tailored to your family's unique needs and financial goals.
           </p>
@@ -72,7 +72,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`relative p-6 hover:shadow-hero transition-all duration-300 hover:-translate-y-2 bg-white border-2 hover:border-gold/30 ${
+              className={`relative p-6 hover:shadow-hero transition-all duration-300 hover:-translate-y-2 bg-white border-2 border-yellow-500 shadow-lg hover:border-yellow-600 ${
                 service.popular ? 'ring-2 ring-gold/50' : ''
               }`}
             >
@@ -118,11 +118,11 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-hero rounded-2xl p-8 md:p-12 text-white">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+        <div className="text-center bg-gradient-to-br from-yellow-100 to-white rounded-2xl p-8 md:p-12 text-navy">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-navy">
             Not Sure Which Policy is Right for You?
           </h3>
-          <p className="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg text-navy/80 mb-6 max-w-2xl mx-auto">
             Let me help you choose the perfect LIC policy based on your age, income, 
             family situation, and financial goals. Free consultation and personalized recommendations.
           </p>

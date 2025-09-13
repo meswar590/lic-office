@@ -75,7 +75,7 @@ const AchievementsSection = () => {
         {/* Stats Row */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
-            <Card key={index} className="p-6 text-center bg-white/80 backdrop-blur-sm shadow-card hover:shadow-hero transition-all duration-300">
+            <Card key={index} className="p-6 text-center bg-gradient-to-br from-yellow-100 to-blue-100 backdrop-blur-sm border-2 border-blue-500 shadow-lg hover:shadow-hero hover:border-blue-600 transition-all duration-300">
               <div className="flex justify-center mb-3">
                 {stat.icon}
               </div>
@@ -98,13 +98,13 @@ const AchievementsSection = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-navy mb-1">{achievement.title}</h3>
-                  <p className="text-gold font-semibold text-sm mb-1">{achievement.subtitle}</p>
-                  <span className="text-xs bg-navy/10 text-navy px-2 py-1 rounded-full">
+                  <p className="text-gold font-bold text-sm mb-1">{achievement.subtitle}</p>
+                  <span className="text-xs font-bold bg-navy/10 text-navy px-2 py-1 rounded-full">
                     {achievement.year}
                   </span>
                 </div>
               </div>
-              <p className="text-navy/70 text-sm leading-relaxed">
+              <p className="text-navy/70 text-sm font-bold leading-relaxed">
                 {achievement.description}
               </p>
             </Card>
@@ -114,7 +114,7 @@ const AchievementsSection = () => {
 
         {/* Recognition Gallery */}
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-card">
-          <h3 className="text-2xl font-bold text-navy text-center mb-8">Recognition Gallery</h3>
+          <h3 className="text-2xl font-bold text-navy text-center mb-8 bg-white-200 px-6 py-3 rounded-lg center-block">Recognition Gallery</h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {[
               { src: "/recognition/award-1.jpg", alt: "Award Recognition Ceremony" },
