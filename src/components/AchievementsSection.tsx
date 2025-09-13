@@ -3,6 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Trophy, Award, Medal, Star, Crown, Target } from 'lucide-react';
 import postalStampAward from '@/assets/postal-stamp-award.jpg';
 import chairmanAward from '@/assets/chairman-award.jpg';
+import zonalManagerAward from '@/assets/zonal-manager-award.jpg';
 
 const AchievementsSection = () => {
   const achievements = [
@@ -180,6 +181,40 @@ const AchievementsSection = () => {
                     </p>
                     <div className="inline-block bg-gradient-to-r from-navy to-gold text-white px-6 py-2 rounded-full text-sm font-semibold">
                       Chairman's Honor
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          {/* Zonal Manager Recognition */}
+          <Card className="relative overflow-hidden bg-gradient-to-br from-gold/15 via-white/95 to-navy/15 backdrop-blur-sm shadow-hero border-2 border-gold/20">
+            <div className="absolute inset-0 bg-gradient-to-r from-gold/5 to-navy/5"></div>
+            <div className="relative p-8">
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="lg:w-1/2">
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-gold/20 to-navy/20 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
+                    <div className="relative bg-white p-3 rounded-2xl shadow-hero">
+                      <img 
+                        src={zonalManagerAward}
+                        alt="Zonal Manager Recognition - Honored by Shri Jagannatham for 10× MDRT achievement"
+                        className="w-full h-auto rounded-xl object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:w-1/2 text-center lg:text-left">
+                  <div className="mb-6">
+                    <Target className="w-16 h-16 text-gold mx-auto lg:mx-0 mb-4" />
+                    <h4 className="text-2xl font-bold text-navy mb-3">Zonal Manager Recognition</h4>
+                    <p className="text-lg text-gold font-semibold mb-4">10× MDRT Achievement</p>
+                    <p className="text-navy/80 leading-relaxed mb-6">
+                      Honored by Zonal Manager Shri Jagannatham for achieving 10× MDRT – a milestone of excellence in the insurance industry.
+                    </p>
+                    <div className="inline-block bg-gradient-to-r from-gold via-navy to-gold text-white px-6 py-2 rounded-full text-sm font-semibold">
+                      Excellence Milestone
                     </div>
                   </div>
                 </div>
