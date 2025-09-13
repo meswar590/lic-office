@@ -110,7 +110,7 @@ const ContactSection = () => {
                   <p className="text-navy/70">
                     LIC Branch Office<br />
                     Main Road, Chimakurthy<br />
-                    Prakasam District, AP - 523187
+                    Prakasam District, AP - 523226
                   </p>
                 </div>
               </div>
