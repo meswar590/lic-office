@@ -11,7 +11,8 @@ import {
   MessageCircle, 
   Instagram,
   Youtube,
-  Send
+  Send,
+  Map
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
@@ -185,6 +186,15 @@ const ContactSection = () => {
                 >
                   <MessageCircle className="w-6 h-6 text-white" />
                 </button>
+                <a
+                  href="https://maps.app.goo.gl/RQVLGb3ry1FjS2RG6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                  title="Open in Google Maps"
+                >
+                  <Map className="w-6 h-6 text-white" />
+                </a>
               </div>
             </div>
           </div>
