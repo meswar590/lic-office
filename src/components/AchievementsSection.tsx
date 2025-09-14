@@ -3,7 +3,8 @@ import { Card } from '@/components/ui/card';
 import { Trophy, Award, Medal, Star, Crown, Target } from 'lucide-react';
 
 const RecognitionGallery = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentRecognitionIndex, setCurrentRecognitionIndex] = useState(0);
+  const [currentCertificateIndex, setCurrentCertificateIndex] = useState(0);
   
   const recognitionImages = [
     { src: "/recognition/award-1.jpg", alt: "Award Recognition Ceremony" },
@@ -18,43 +19,99 @@ const RecognitionGallery = () => {
     { src: "/recognition/award-10.jpg", alt: "Office Recognition Event" }
   ];
 
+  // Placeholder certificates (will be replaced later)
+  const certificateImages = [
+    { src: "/recognition/award-1.jpg", alt: "Certificate 1" },
+    { src: "/recognition/award-2.jpg", alt: "Certificate 2" },
+    { src: "/recognition/award-3.jpg", alt: "Certificate 3" },
+    { src: "/recognition/award-4.jpg", alt: "Certificate 4" },
+    { src: "/recognition/award-5.jpg", alt: "Certificate 5" }
+  ];
+
+  // Recognition photos carousel (1.5 seconds)
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % recognitionImages.length);
-    }, 1000);
+      setCurrentRecognitionIndex((prev) => (prev + 1) % recognitionImages.length);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, [recognitionImages.length]);
+
+  // Certificate photos carousel (2 seconds for variety)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCertificateIndex((prev) => (prev + 1) % certificateImages.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [certificateImages.length]);
 
   return (
     <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-card">
       <h3 className="text-2xl font-bold text-navy text-center mb-8 bg-white-200 px-6 py-3 rounded-lg center-block">Recognition Gallery</h3>
       
-      <div className="relative w-full max-w-2xl mx-auto">
-        <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-          <img 
-            src={recognitionImages[currentImageIndex].src} 
-            alt={recognitionImages[currentImageIndex].alt}
-            className="w-full h-full object-cover transition-opacity duration-500"
-          />
+      <div className="grid md:grid-cols-2 gap-6">
+        {/* Left Frame - Recognition Awards */}
+        <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-xl p-6 border-2 border-blue-200">
+          <h4 className="text-lg font-bold text-navy text-center mb-4">Recognition Awards</h4>
+          <div className="relative w-full">
+            <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={recognitionImages[currentRecognitionIndex].src} 
+                alt={recognitionImages[currentRecognitionIndex].alt}
+                className="w-full h-full object-cover transition-opacity duration-500"
+              />
+            </div>
+            
+            {/* Recognition indicators */}
+            <div className="flex justify-center mt-4 space-x-1">
+              {recognitionImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentRecognitionIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentRecognitionIndex ? 'bg-blue-600 scale-125' : 'bg-navy/30'
+                  }`}
+                />
+              ))}
+            </div>
+            
+            <p className="text-center text-navy/60 text-sm mt-3">
+              {recognitionImages[currentRecognitionIndex].alt}
+            </p>
+          </div>
         </div>
-        
-        {/* Image indicators */}
-        <div className="flex justify-center mt-4 space-x-2">
-          {recognitionImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentImageIndex ? 'bg-gold scale-125' : 'bg-navy/30'
-              }`}
-            />
-          ))}
+
+        {/* Right Frame - Certificates & Other Photos */}
+        <div className="bg-gradient-to-br from-yellow-50 to-blue-50 rounded-xl p-6 border-2 border-yellow-200">
+          <h4 className="text-lg font-bold text-navy text-center mb-4">Certificates & Awards</h4>
+          <div className="relative w-full">
+            <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={certificateImages[currentCertificateIndex].src} 
+                alt={certificateImages[currentCertificateIndex].alt}
+                className="w-full h-full object-cover transition-opacity duration-500"
+              />
+            </div>
+            
+            {/* Certificate indicators */}
+            <div className="flex justify-center mt-4 space-x-1">
+              {certificateImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentCertificateIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentCertificateIndex ? 'bg-yellow-600 scale-125' : 'bg-navy/30'
+                  }`}
+                />
+              ))}
+            </div>
+            
+            <p className="text-center text-navy/60 text-sm mt-3">
+              {certificateImages[currentCertificateIndex].alt}
+            </p>
+          </div>
         </div>
-        
-        <p className="text-center text-navy/60 text-sm mt-4">
-          {recognitionImages[currentImageIndex].alt}
-        </p>
       </div>
       
       <p className="text-center text-navy/60 text-sm mt-6">
