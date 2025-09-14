@@ -278,19 +278,23 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Google Maps Embed */}
+        {/* Google Maps Embed - Medium Size */}
         <div className="mt-16">
-          <Card className="p-2 bg-white shadow-card">
-            <div className="aspect-video rounded-lg overflow-hidden">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl font-bold text-navy mb-2">Visit Our Office</h3>
+            <p className="text-navy/70">LIC Office by Maddali Sreehari, Chimakurthy</p>
+          </div>
+          <Card className="p-3 bg-white shadow-card mx-auto max-w-4xl">
+            <div className="h-80 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.8421892847565!2d79.9323633!3d15.4080209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b61f7a1f7a1f7%3A0x9b5b5b5b5b5b5b5b!2sLIC%20Branch%20Office%2C%20Main%20Road%2C%20Chimakurthy%2C%20Prakasam%20District%2C%20Andhra%20Pradesh%20523226!5e0!3m2!1sen!2sin!4v1642584760000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dw901SwHSMlMz0&q=LIC%20office%20maddali%20sreehari%20chimakurthy%20prakasam%20district%20andhra%20pradesh&zoom=16"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="LIC Office Location - Chimakurthy"
+                title="LIC Office by Maddali Sreehari - Chimakurthy"
               />
             </div>
           </Card>
