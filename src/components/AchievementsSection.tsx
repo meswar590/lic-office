@@ -1,6 +1,68 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Trophy, Award, Medal, Star, Crown, Target } from 'lucide-react';
+
+const RecognitionGallery = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const recognitionImages = [
+    { src: "/recognition/award-1.jpg", alt: "Award Recognition Ceremony" },
+    { src: "/recognition/award-2.jpg", alt: "LIC Achievement Award" },
+    { src: "/recognition/award-3.jpg", alt: "Award Ceremony with Officials" },
+    { src: "/recognition/award-4.jpg", alt: "MDRT-23 Achievement" },
+    { src: "/recognition/award-5.jpg", alt: "Dussehra Diwali Meet Award" },
+    { src: "/recognition/award-6.jpg", alt: "LIC Branch Recognition" },
+    { src: "/recognition/award-7.jpg", alt: "1 Crore Premium Achievement" },
+    { src: "/recognition/award-8.jpg", alt: "Branch Award Recognition" },
+    { src: "/recognition/award-9.jpg", alt: "Quarterly Achievement Award" },
+    { src: "/recognition/award-10.jpg", alt: "Office Recognition Event" }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % recognitionImages.length);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [recognitionImages.length]);
+
+  return (
+    <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-card">
+      <h3 className="text-2xl font-bold text-navy text-center mb-8 bg-white-200 px-6 py-3 rounded-lg center-block">Recognition Gallery</h3>
+      
+      <div className="relative w-full max-w-2xl mx-auto">
+        <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+          <img 
+            src={recognitionImages[currentImageIndex].src} 
+            alt={recognitionImages[currentImageIndex].alt}
+            className="w-full h-full object-cover transition-opacity duration-500"
+          />
+        </div>
+        
+        {/* Image indicators */}
+        <div className="flex justify-center mt-4 space-x-2">
+          {recognitionImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentImageIndex ? 'bg-gold scale-125' : 'bg-navy/30'
+              }`}
+            />
+          ))}
+        </div>
+        
+        <p className="text-center text-navy/60 text-sm mt-4">
+          {recognitionImages[currentImageIndex].alt}
+        </p>
+      </div>
+      
+      <p className="text-center text-navy/60 text-sm mt-6">
+        30+ Years of Excellence - Awards and Recognition from LIC India
+      </p>
+    </div>
+  );
+};
 
 const AchievementsSection = () => {
 
@@ -113,37 +175,7 @@ const AchievementsSection = () => {
 
 
         {/* Recognition Gallery */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-card">
-          <h3 className="text-2xl font-bold text-navy text-center mb-8 bg-white-200 px-6 py-3 rounded-lg center-block">Recognition Gallery</h3>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {[
-              { src: "/recognition/award-1.jpg", alt: "Award Recognition Ceremony" },
-              { src: "/recognition/award-2.jpg", alt: "LIC Achievement Award" },
-              { src: "/recognition/award-3.jpg", alt: "Award Ceremony with Officials" },
-              { src: "/recognition/award-4.jpg", alt: "MDRT-23 Achievement" },
-              { src: "/recognition/award-5.jpg", alt: "Dussehra Diwali Meet Award" },
-              { src: "/recognition/award-6.jpg", alt: "LIC Branch Recognition" },
-              { src: "/recognition/award-7.jpg", alt: "1 Crore Premium Achievement" },
-              { src: "/recognition/award-8.jpg", alt: "Branch Award Recognition" },
-              { src: "/recognition/award-9.jpg", alt: "Quarterly Achievement Award" },
-              { src: "/recognition/award-10.jpg", alt: "Office Recognition Event" }
-            ].map((award, index) => (
-              <div 
-                key={index} 
-                className="aspect-square rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105"
-              >
-                <img 
-                  src={award.src} 
-                  alt={award.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-navy/60 text-sm mt-6">
-            30+ Years of Excellence - Awards and Recognition from LIC India
-          </p>
-        </div>
+        <RecognitionGallery />
       </div>
     </section>
   );
