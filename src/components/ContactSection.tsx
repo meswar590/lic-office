@@ -287,14 +287,14 @@ const ContactSection = () => {
           <Card className="p-3 bg-white shadow-card mx-auto max-w-4xl">
             <div className="h-80 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dw901SwHSMlMz0&q=LIC%20office%20maddali%20sreehari%20chimakurthy%20prakasam%20district%20andhra%20pradesh&zoom=16"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15315.524915465473!2d80.34269897779542!3d15.408020900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b73e6b8b8b8b8%3A0x8e8e8e8e8e8e8e8e!2sChimakurthy%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1642584760000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="LIC Office by Maddali Sreehari - Chimakurthy"
+                title="LIC Office Location - Chimakurthy, Andhra Pradesh"
               />
             </div>
           </Card>
