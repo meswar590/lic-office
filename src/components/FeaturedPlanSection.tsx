@@ -112,12 +112,12 @@ const FeaturedPlanSection = () => {
                       <div className="text-white/80 text-sm mt-1">Premium Payment</div>
                     </div>
                     <div className="bg-white/10 rounded-lg p-4">
-                      <div className="text-2xl font-bold text-gold">₹1,00,000*</div>
+                      <div className="text-2xl font-bold text-gold">₹1,00,000</div>
                       <div className="text-white/80 text-sm mt-1">Annual Income</div>
                     </div>
                   </div>
                   <p className="text-white/70 text-xs mt-4 text-center">
-                    *Approximate values. Actual returns may vary. Terms and conditions apply.
+                    10% of the sum assured will be paid as annual income.
                   </p>
                 </div>
 
