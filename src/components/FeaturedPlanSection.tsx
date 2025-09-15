@@ -49,15 +49,15 @@ const FeaturedPlanSection = () => {
     <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 bg-gold/10 text-gold hover:bg-gold/20">
+        <div className="text-center mb-16 bg-gradient-to-r from-gold/20 via-gold/10 to-gold/20 rounded-2xl p-8 mx-4">
+          <Badge variant="secondary" className="mb-4 bg-gold/30 text-gold hover:bg-gold/40 shadow-md">
             <Star className="w-4 h-4 mr-2" />
             Most Popular Plan
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
             Featured Plan: <span className="text-gold">LIC Jeevan Utsav</span>
           </h2>
-          <p className="text-xl text-navy/70 max-w-3xl mx-auto">
+          <p className="text-xl text-navy/80 max-w-3xl mx-auto font-medium">
             Lifetime Income + Whole Life Cover — Pay for only up to 16 years, enjoy income for life
           </p>
         </div>
@@ -112,7 +112,7 @@ const FeaturedPlanSection = () => {
                       <div className="text-white/80 text-sm mt-1">Premium Payment</div>
                     </div>
                     <div className="bg-white/10 rounded-lg p-4">
-                      <div className="text-2xl font-bold text-gold">₹65,000*</div>
+                      <div className="text-2xl font-bold text-gold">₹1,00,000*</div>
                       <div className="text-white/80 text-sm mt-1">Annual Income</div>
                     </div>
                   </div>
@@ -131,9 +131,8 @@ const FeaturedPlanSection = () => {
                     Get Plan Details
                   </Button>
                   <Button 
-                    variant="outline" 
-                    className="flex-1 border-white text-white hover:bg-white/10"
-                    onClick={scrollToContact}
+                    className="flex-1 bg-blue-600 text-white hover:bg-blue-700 border-0 font-semibold transition-colors"
+                    onClick={() => window.open('https://liccalculators.net/lic-jeevan-utsav-plan-771/', '_blank')}
                   >
                     <Calculator className="w-4 h-4 mr-2" />
                     Calculate Income
