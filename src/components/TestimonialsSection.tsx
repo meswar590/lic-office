@@ -79,41 +79,46 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className="relative p-6 bg-gradient-to-br from-white to-gray-50/50 hover:shadow-hero transition-all duration-300 hover:-translate-y-2 border-l-4 border-l-gold"
-            >
-              {/* Quote Icon */}
-              <div className="absolute top-4 right-4">
-                <Quote className="w-8 h-8 text-gold/30" />
-              </div>
-              
-              {/* Rating */}
-              <div className="flex items-center gap-1 mb-4">
-                {renderStars(testimonial.rating)}
-              </div>
-              
-              {/* Testimonial Text */}
-              <p className="text-navy/80 leading-relaxed mb-6 italic">
-                "{testimonial.text}"
-              </p>
-              
-              {/* Client Info */}
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-navy/10 rounded-full flex items-center justify-center">
-                  <User className="w-6 h-6 text-navy/60" />
+        {/* Testimonials Scrolling Container */}
+        <div className="relative overflow-hidden py-8 mb-12">
+          <div className="flex animate-scroll-left gap-6" style={{
+            width: 'calc(400px * 12)'
+          }}>
+            {/* Duplicate testimonials for seamless scroll */}
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <Card 
+                key={index} 
+                className="flex-shrink-0 w-80 p-6 bg-gradient-to-br from-white to-gray-50/50 shadow-lg border border-gray-200 rounded-lg"
+              >
+                {/* Quote Icon */}
+                <div className="absolute top-4 right-4">
+                  <Quote className="w-6 h-6 text-gold/30" />
                 </div>
-                <div>
-                  <div className="font-semibold text-navy">{testimonial.name}</div>
-                  <div className="text-sm text-navy/60">{testimonial.location}</div>
-                  <div className="text-xs text-gold font-medium mt-1">{testimonial.policy}</div>
+                
+                {/* Rating */}
+                <div className="flex items-center gap-1 mb-4">
+                  {renderStars(testimonial.rating)}
                 </div>
-              </div>
-            </Card>
-          ))}
+                
+                {/* Testimonial Text */}
+                <p className="text-navy/80 leading-relaxed mb-6 italic text-sm">
+                  "{testimonial.text}"
+                </p>
+                
+                {/* Client Info */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center">
+                    <User className="w-5 h-5 text-navy/60" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-navy text-sm">{testimonial.name}</div>
+                    <div className="text-xs text-navy/60">{testimonial.location}</div>
+                    <div className="text-xs text-gold font-medium mt-1">{testimonial.policy}</div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Call to Action */}
