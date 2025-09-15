@@ -6,6 +6,7 @@ import ScrollingPlansSection from '@/components/ScrollingPlansSection';
 import FeaturedPlanSection from '@/components/FeaturedPlanSection';
 import ServicesSection from '@/components/ServicesSection';
 import AchievementsSection from '@/components/AchievementsSection';
+import ServicesWeProvideSection from '@/components/ServicesWeProvideSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -23,6 +24,7 @@ const Index = () => {
         <ScrollingPlansSection />
         <FeaturedPlanSection />
         <ServicesSection />
+        <ServicesWeProvideSection />
         <AchievementsSection />
         <TestimonialsSection />
         <ContactSection />

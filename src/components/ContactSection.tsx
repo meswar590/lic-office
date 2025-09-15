@@ -197,6 +197,8 @@ const ContactSection = () => {
                 </a>
               </div>
             </div>
+
+            {/* Highlighted Services List moved to its own section */}
           </div>
 
           {/* Contact Form */}
@@ -285,30 +287,31 @@ const ContactSection = () => {
                 Start WhatsApp Chat - Get Instant Response
               </Button>
             </div>
-          </div>
-        </div>
 
-        {/* Google Maps Embed - Medium Size */}
-        <div className="mt-16">
-          <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-navy mb-2">Visit Our Office</h3>
-            <p className="text-navy/70">LIC Office by Maddali Sreehari, Chimakurthy</p>
-          </div>
-          <Card className="p-3 bg-white shadow-card mx-auto max-w-4xl">
-            <div className="h-80 rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15315.524915465473!2d80.34269897779542!3d15.408020900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b73e6b8b8b8b8%3A0x8e8e8e8e8e8e8e8e!2sChimakurthy%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1642584760000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="LIC Office Location - Chimakurthy, Andhra Pradesh"
-              />
+            {/* Google Maps - moved below the form */}
+            <div className="mt-10">
+              <div className="text-center mb-4">
+                <h3 className="text-2xl font-bold text-navy mb-2">Visit Our Office</h3>
+                <p className="text-navy/70">LIC Office by Maddali Sreehari, Chimakurthy</p>
+              </div>
+              <Card className="p-3 bg-white shadow-card">
+                <div className="h-80 md:h-96 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15315.524915465473!2d80.34269897779542!3d15.408020900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b73e6b8b8b8b8%3A0x8e8e8e8e8e8e8e8e!2sChimakurthy%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1642584760000!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="LIC Office Location - Chimakurthy, Andhra Pradesh"
+                  />
+                </div>
+              </Card>
             </div>
-          </Card>
+          </div>
         </div>
+        
       </div>
     </section>
   );

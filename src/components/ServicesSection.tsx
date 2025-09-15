@@ -8,7 +8,8 @@ import {
   PiggyBank, 
   TrendingUp, 
   Users,
-  ArrowRight
+  ArrowRight,
+  Calculator
 } from 'lucide-react';
 
 const ServicesSection = () => {
@@ -43,6 +44,14 @@ const ServicesSection = () => {
       link: "/retirement-plans"
     },
     {
+      icon: <Calculator className="w-8 h-8 text-gold" />,
+      title: "Premium Calculator",
+      description: "Quickly estimate premiums for various LIC policies using the official calculator.",
+      features: ["Official LIC tool", "Fast and accurate estimates", "Opens in new tab"],
+      link: "https://ebiz.licindia.in/D2CPM/?&_ga=2.2502002.312893476.1677125883-1841437327.1677125883#qni/basicinfo",
+      highlightYellow: true
+    },
+    {
       icon: <TrendingUp className="w-8 h-8 text-gold" />,
       title: "Investment Plans",
       description: "Market-linked insurance plans (ULIPs) offering investment growth with insurance protection.",
@@ -72,9 +81,12 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`relative p-6 hover:shadow-hero transition-all duration-300 hover:-translate-y-2 bg-white border-2 border-yellow-500 shadow-lg hover:border-yellow-600 ${
+              className={`relative p-6 hover:shadow-hero transition-all duration-300 hover:-translate-y-2 ${
+                (service as any).highlightYellow ? 'bg-yellow-100' : 'bg-white'
+              } border-2 border-yellow-500 shadow-lg hover:border-yellow-600 ${
                 service.popular ? 'ring-2 ring-gold/50' : ''
-              }`}
+              } flex flex-col`}
+              id={(service as any).title === 'Premium Calculator' ? 'premium-calculator-card' : undefined}
             >
               {service.popular && (
                 <div className="absolute -top-3 left-6">
@@ -104,15 +116,29 @@ const ServicesSection = () => {
                 ))}
               </ul>
               
-              <Link to={service.link}>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300 group"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+              <div className="mt-auto">
+                {service.link.startsWith('http') ? (
+                  <a href={service.link} target="_blank" rel="noopener noreferrer">
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300 group"
+                    >
+                      Open Calculator
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </a>
+                ) : (
+                  <Link to={service.link}>
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300 group"
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                )}
+              </div>
             </Card>
           ))}
         </div>

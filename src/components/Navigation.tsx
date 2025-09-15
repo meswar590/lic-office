@@ -17,15 +17,26 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (sectionId === 'premium-calculator-card') {
+        el.classList.add('ring-4', 'ring-yellow-300', 'transition-shadow');
+        setTimeout(() => {
+          el.classList.remove('ring-4', 'ring-yellow-300', 'transition-shadow');
+        }, 1000);
+      }
+    }
     setIsMenuOpen(false);
   };
 
   const navItems = [
     { label: 'Home', id: 'hero' },
     { label: 'About', id: 'about' },
-    { label: 'Services', id: 'services' },
-    { label: 'Achievements', id: 'achievements' },
+    { label: 'Services', id: 'services-we-provide' },
+    { label: 'Calculator', id: 'premium-calculator-card' },
+    { label: 'Achievements', id: 'gallery' },
+    { label: 'Gallery', id: 'gallery' },
     { label: 'Testimonials', id: 'testimonials' },
     { label: 'Contact', id: 'contact' }
   ];

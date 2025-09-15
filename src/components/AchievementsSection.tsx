@@ -121,6 +121,64 @@ const RecognitionGallery = () => {
   );
 };
 
+const LifetimeAchievements = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const achievements = [
+    {
+      image: "/src/assets/postal-stamp-award.jpg",
+      caption: "Special recognition with a commemorative postal stamp – a rare honor acknowledging exceptional service to the insurance industry and the nation."
+    },
+    {
+      image: "/src/assets/chairman-award.jpg", 
+      caption: "A proud moment as Maddali Sreehari was honored and personally recognized by LIC Chairman Shri M. R. Kumar for his remarkable achievements."
+    },
+    {
+      image: "/src/assets/zonal-manager-award.jpg",
+      caption: "Honored by Zonal Manager Shri Jagannatham for achieving 10× MDRT – a milestone of excellence in the insurance industry."
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % achievements.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [achievements.length]);
+
+  return (
+    <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-card mb-12">
+      <h3 className="text-2xl font-bold text-navy text-center mb-8">Lifetime Achievements</h3>
+      
+      <div className="relative w-full max-w-3xl mx-auto">
+        <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+          <img 
+            src={achievements[currentIndex].image} 
+            alt={`Achievement ${currentIndex + 1}`}
+            className="w-full h-full object-cover transition-opacity duration-500"
+          />
+        </div>
+        
+        <div className="flex justify-center mt-4 space-x-2">
+          {achievements.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentIndex ? 'bg-gold scale-125' : 'bg-navy/30'
+              }`}
+            />
+          ))}
+        </div>
+        
+        <p className="text-center text-navy/70 text-sm mt-4 max-w-2xl mx-auto">
+          {achievements[currentIndex].caption}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 const AchievementsSection = () => {
 
@@ -192,7 +250,7 @@ const AchievementsSection = () => {
           </p>
         </div>
 
-        {/* Stats Row */}
+        {/* Stats Row - restored */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
             <Card key={index} className="p-6 text-center bg-gradient-to-br from-yellow-100 to-blue-100 backdrop-blur-sm border-2 border-blue-500 shadow-lg hover:shadow-hero hover:border-blue-600 transition-all duration-300">
@@ -205,36 +263,12 @@ const AchievementsSection = () => {
           ))}
         </div>
 
-        {/* Achievements Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {achievements.map((achievement, index) => (
-            <Card 
-              key={index} 
-              className="group p-6 bg-white/90 backdrop-blur-sm hover:shadow-hero transition-all duration-300 hover:-translate-y-2 border-l-4 border-l-gold"
-            >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {achievement.icon}
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-navy mb-1">{achievement.title}</h3>
-                  <p className="text-gold font-bold text-sm mb-1">{achievement.subtitle}</p>
-                  <span className="text-xs font-bold bg-navy/10 text-navy px-2 py-1 rounded-full">
-                    {achievement.year}
-                  </span>
-                </div>
-              </div>
-              <p className="text-navy/70 text-sm font-bold leading-relaxed">
-                {achievement.description}
-              </p>
-            </Card>
-          ))}
-        </div>
-
-
+        {/* Lifetime Achievements removed as it's already in hero section */}
 
         {/* Recognition Gallery */}
-        <RecognitionGallery />
+        <div id="gallery">
+          <RecognitionGallery />
+        </div>
       </div>
     </section>
   );
