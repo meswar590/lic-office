@@ -5,6 +5,8 @@ import { Trophy, Award, Medal, Star, Crown, Target } from 'lucide-react';
 const RecognitionGallery = () => {
   const [currentRecognitionIndex, setCurrentRecognitionIndex] = useState(0);
   const [currentCertificateIndex, setCurrentCertificateIndex] = useState(0);
+  const [currentEventIndex, setCurrentEventIndex] = useState(0);
+  const [currentCeremonyIndex, setCurrentCeremonyIndex] = useState(0);
   
   const recognitionImages = [
     { src: "/recognition/award-1.jpg", alt: "Award Recognition Ceremony" },
@@ -28,6 +30,33 @@ const RecognitionGallery = () => {
     { src: "/recognition/award-5.jpg", alt: "Certificate 5" }
   ];
 
+  // Event Photos - latest photos (w11..w20)
+  const eventImages = [
+    { src: "/recognition/w11.jpg", alt: "Event Photo 11" },
+    { src: "/recognition/w12.jpg", alt: "Event Photo 12" },
+    { src: "/recognition/w13.jpg", alt: "Event Photo 13" },
+    { src: "/recognition/w14.jpg", alt: "Event Photo 14" },
+    { src: "/recognition/w16.jpg", alt: "Event Photo 16" },
+    { src: "/recognition/w17.jpg", alt: "Event Photo 17" },
+    { src: "/recognition/w18.jpg", alt: "Event Photo 18" },
+    { src: "/recognition/w19.jpg", alt: "Event Photo 19" },
+    { src: "/recognition/w20.jpg", alt: "Event Photo 20" }
+  ];
+
+  // Ceremony Photos - latest photos (w21..w30)
+  const ceremonyImages = [
+    { src: "/recognition/w21.jpg", alt: "Ceremony Photo 21" },
+    { src: "/recognition/w22.jpg", alt: "Ceremony Photo 22" },
+    { src: "/recognition/w23.jpg", alt: "Ceremony Photo 23" },
+    { src: "/recognition/w24.jpg", alt: "Ceremony Photo 24" },
+    { src: "/recognition/w25.jpg", alt: "Ceremony Photo 25" },
+    { src: "/recognition/w26.jpg", alt: "Ceremony Photo 26" },
+    { src: "/recognition/w27.jpg", alt: "Ceremony Photo 27" },
+    { src: "/recognition/w28.jpg", alt: "Ceremony Photo 28" },
+    { src: "/recognition/w29.jpg", alt: "Ceremony Photo 29" },
+    { src: "/recognition/w30.jpg", alt: "Ceremony Photo 30" }
+  ];
+
   // Recognition photos carousel (1.5 seconds)
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,6 +74,24 @@ const RecognitionGallery = () => {
 
     return () => clearInterval(interval);
   }, [certificateImages.length]);
+
+  // Event photos carousel (2.5 seconds)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentEventIndex((prev) => (prev + 1) % eventImages.length);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, [eventImages.length]);
+
+  // Ceremony photos carousel (3 seconds)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCeremonyIndex((prev) => (prev + 1) % ceremonyImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [ceremonyImages.length]);
 
   return (
     <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-card">
@@ -76,9 +123,7 @@ const RecognitionGallery = () => {
               ))}
             </div>
             
-            <p className="text-center text-navy/60 text-sm mt-3">
-              {recognitionImages[currentRecognitionIndex].alt}
-            </p>
+            
           </div>
         </div>
 
@@ -107,9 +152,68 @@ const RecognitionGallery = () => {
               ))}
             </div>
             
-            <p className="text-center text-navy/60 text-sm mt-3">
-              {certificateImages[currentCertificateIndex].alt}
-            </p>
+            
+          </div>
+        </div>
+      </div>
+
+      {/* Second Row - Event Photos and Ceremony Photos */}
+      <div className="grid md:grid-cols-2 gap-6 mt-8">
+        {/* Left Frame - Event Photos */}
+        <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border-2 border-green-200">
+          <h4 className="text-lg font-bold text-navy text-center mb-4">Event Photos</h4>
+          <div className="relative w-full">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={eventImages[currentEventIndex].src} 
+                alt={eventImages[currentEventIndex].alt}
+                className="w-full h-full object-cover transition-opacity duration-500"
+              />
+            </div>
+            
+            {/* Event indicators */}
+            <div className="flex justify-center mt-4 space-x-1">
+              {eventImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentEventIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentEventIndex ? 'bg-green-600 scale-125' : 'bg-navy/30'
+                  }`}
+                />
+              ))}
+            </div>
+            
+            
+          </div>
+        </div>
+
+        {/* Right Frame - Ceremony Photos */}
+        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200">
+          <h4 className="text-lg font-bold text-navy text-center mb-4">Ceremony Photos</h4>
+          <div className="relative w-full">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={ceremonyImages[currentCeremonyIndex].src} 
+                alt={ceremonyImages[currentCeremonyIndex].alt}
+                className="w-full h-full object-cover transition-opacity duration-500"
+              />
+            </div>
+            
+            {/* Ceremony indicators */}
+            <div className="flex justify-center mt-4 space-x-1">
+              {ceremonyImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentCeremonyIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentCeremonyIndex ? 'bg-purple-600 scale-125' : 'bg-navy/30'
+                  }`}
+                />
+              ))}
+            </div>
+            
+            
           </div>
         </div>
       </div>
