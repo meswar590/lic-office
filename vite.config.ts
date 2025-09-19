@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/lic-office/" : "/",   // 👈 Only use /lic-office/ in production
+  base: command === "build" ? "/licsreehari/" : "/",   
   server: {
     host: "::",
     port: 8080,
