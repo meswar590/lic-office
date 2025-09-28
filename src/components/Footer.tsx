@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-6">
               <div className="w-20 h-20">
                 <img 
-                  src="/lic-logo.jpg" 
+                  src="./lic-logo.jpg" 
                   alt="LIC Logo" 
                   className="w-full h-full object-contain"
                 />

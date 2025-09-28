@@ -9,52 +9,52 @@ const RecognitionGallery = () => {
   const [currentCeremonyIndex, setCurrentCeremonyIndex] = useState(0);
   
   const recognitionImages = [
-    { src: "/recognition/award-1.jpg", alt: "Award Recognition Ceremony" },
-    { src: "/recognition/award-2.jpg", alt: "LIC Achievement Award" },
-    { src: "/recognition/award-3.jpg", alt: "Award Ceremony with Officials" },
-    { src: "/recognition/award-4.jpg", alt: "MDRT-23 Achievement" },
-    { src: "/recognition/award-5.jpg", alt: "Dussehra Diwali Meet Award" },
-    { src: "/recognition/award-6.jpg", alt: "LIC Branch Recognition" },
-    { src: "/recognition/award-7.jpg", alt: "1 Crore Premium Achievement" },
-    { src: "/recognition/award-8.jpg", alt: "Branch Award Recognition" },
-    { src: "/recognition/award-9.jpg", alt: "Quarterly Achievement Award" },
-    { src: "/recognition/award-10.jpg", alt: "Office Recognition Event" }
+    { src: "./recognition/award-1.jpg", alt: "Award Recognition Ceremony" },
+    { src: "./recognition/award-2.jpg", alt: "LIC Achievement Award" },
+    { src: "./recognition/award-3.jpg", alt: "Award Ceremony with Officials" },
+    { src: "./recognition/award-4.jpg", alt: "MDRT-23 Achievement" },
+    { src: "./recognition/award-5.jpg", alt: "Dussehra Diwali Meet Award" },
+    { src: "./recognition/award-6.jpg", alt: "LIC Branch Recognition" },
+    { src: "./recognition/award-7.jpg", alt: "1 Crore Premium Achievement" },
+    { src: "./recognition/award-8.jpg", alt: "Branch Award Recognition" },
+    { src: "./recognition/award-9.jpg", alt: "Quarterly Achievement Award" },
+    { src: "./recognition/award-10.jpg", alt: "Office Recognition Event" }
   ];
 
   // Placeholder certificates (will be replaced later)
   const certificateImages = [
-    { src: "/recognition/award-1.jpg", alt: "Certificate 1" },
-    { src: "/recognition/award-2.jpg", alt: "Certificate 2" },
-    { src: "/recognition/award-3.jpg", alt: "Certificate 3" },
-    { src: "/recognition/award-4.jpg", alt: "Certificate 4" },
-    { src: "/recognition/award-5.jpg", alt: "Certificate 5" }
+    { src: "./recognition/award-1.jpg", alt: "Certificate 1" },
+    { src: "./recognition/award-2.jpg", alt: "Certificate 2" },
+    { src: "./recognition/award-3.jpg", alt: "Certificate 3" },
+    { src: "./recognition/award-4.jpg", alt: "Certificate 4" },
+    { src: "./recognition/award-5.jpg", alt: "Certificate 5" }
   ];
 
   // Event Photos - latest photos (w11..w20)
   const eventImages = [
-    { src: "/recognition/w11.jpg", alt: "Event Photo 11" },
-    { src: "/recognition/w12.jpg", alt: "Event Photo 12" },
-    { src: "/recognition/w13.jpg", alt: "Event Photo 13" },
-    { src: "/recognition/w14.jpg", alt: "Event Photo 14" },
-    { src: "/recognition/w16.jpg", alt: "Event Photo 16" },
-    { src: "/recognition/w17.jpg", alt: "Event Photo 17" },
-    { src: "/recognition/w18.jpg", alt: "Event Photo 18" },
-    { src: "/recognition/w19.jpg", alt: "Event Photo 19" },
-    { src: "/recognition/w20.jpg", alt: "Event Photo 20" }
+    { src: "./recognition/w11.jpg", alt: "Event Photo 11" },
+    { src: "./recognition/w12.jpg", alt: "Event Photo 12" },
+    { src: "./recognition/w13.jpg", alt: "Event Photo 13" },
+    { src: "./recognition/w14.jpg", alt: "Event Photo 14" },
+    { src: "./recognition/w16.jpg", alt: "Event Photo 16" },
+    { src: "./recognition/w17.jpg", alt: "Event Photo 17" },
+    { src: "./recognition/w18.jpg", alt: "Event Photo 18" },
+    { src: "./recognition/w19.jpg", alt: "Event Photo 19" },
+    { src: "./recognition/w20.jpg", alt: "Event Photo 20" }
   ];
 
   // Ceremony Photos - latest photos (w21..w30)
   const ceremonyImages = [
-    { src: "/recognition/w21.jpg", alt: "Ceremony Photo 21" },
-    { src: "/recognition/w22.jpg", alt: "Ceremony Photo 22" },
-    { src: "/recognition/w23.jpg", alt: "Ceremony Photo 23" },
-    { src: "/recognition/w24.jpg", alt: "Ceremony Photo 24" },
-    { src: "/recognition/w25.jpg", alt: "Ceremony Photo 25" },
-    { src: "/recognition/w26.jpg", alt: "Ceremony Photo 26" },
-    { src: "/recognition/w27.jpg", alt: "Ceremony Photo 27" },
-    { src: "/recognition/w28.jpg", alt: "Ceremony Photo 28" },
-    { src: "/recognition/w29.jpg", alt: "Ceremony Photo 29" },
-    { src: "/recognition/w30.jpg", alt: "Ceremony Photo 30" }
+    { src: "./recognition/w21.jpg", alt: "Ceremony Photo 21" },
+    { src: "./recognition/w22.jpg", alt: "Ceremony Photo 22" },
+    { src: "./recognition/w23.jpg", alt: "Ceremony Photo 23" },
+    { src: "./recognition/w24.jpg", alt: "Ceremony Photo 24" },
+    { src: "./recognition/w25.jpg", alt: "Ceremony Photo 25" },
+    { src: "./recognition/w26.jpg", alt: "Ceremony Photo 26" },
+    { src: "./recognition/w27.jpg", alt: "Ceremony Photo 27" },
+    { src: "./recognition/w28.jpg", alt: "Ceremony Photo 28" },
+    { src: "./recognition/w29.jpg", alt: "Ceremony Photo 29" },
+    { src: "./recognition/w30.jpg", alt: "Ceremony Photo 30" }
   ];
 
   // Recognition photos carousel (1.5 seconds)
