@@ -86,8 +86,7 @@ const HeroSection = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">
-              30+ Years of
-              <span className="block text-gold">Securing Lives</span>
+              <div className="animated-text">30+ Years of Securing Lives & their Families</div>
               <span className="block text-lg md:text-xl font-normal text-white/90 mt-2">
                 3000+ Families Protected
               </span>
