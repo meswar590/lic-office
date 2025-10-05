@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
             <p className="text-white/80 leading-relaxed mb-6">
               For over three decades, I have been committed to securing the financial future 
-              of families across Chimakurthy and beyond. With 2000+ families protected and 
+              of families across Chimakurthy and beyond. With 3000+ families protected and 
               100+ awards won, I continue to be your dedicated partner in life insurance.
             </p>
             <div className="flex items-center gap-6 text-sm">
@@ -44,7 +44,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="w-4 h-4 text-gold" />
-                <span>2000+ Families</span>
+                <span>3000+ Families</span>
               </div>
             </div>
           </div>

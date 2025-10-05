@@ -5,6 +5,7 @@ import { Phone, Award, Users, Calendar, Crown, Target } from 'lucide-react';
 import postalStampAward from '@/assets/postal-stamp-award.jpg';
 import chairmanAward from '@/assets/chairman-award.jpg';
 import zonalManagerAward from '@/assets/zonal-manager-award.jpg';
+import guinness from '@/assets/guinness.jpg';
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -18,7 +19,7 @@ const HeroSection = () => {
       icon: <Crown className="w-16 h-16 text-gold" />,
       title: "Featured on Indian Postal Stamp",
       subtitle: "A Rare National Honor",
-      description: "Celebrating the rare honor of being featured on an Indian Postal Stamp.",
+      description: "LIC – Celebrating the rare and prestigious honor of being featured on an Indian Postal Stamp, tribute and service with contributions made by Maddali Sreehari that have secured the future of 3000+ families..",
       badge: "Lifetime Achievement",
       image: postalStampAward,
       alt: "Indian Postal Stamp Honor - Lifetime Achievement",
@@ -44,6 +45,17 @@ const HeroSection = () => {
       badge: "Excellence Milestone",
       image: zonalManagerAward,
       alt: "Zonal Manager Recognition - Honored by Shri Jagannatham for 10× MDRT achievement",
+      gradient: "from-gold/15 via-white/95 to-navy/15",
+      borderColor: "border-gold/20"
+    },
+    {
+      icon: <Target className="w-16 h-16 text-gold" />,
+      title: "Guinness World Record Participator",
+      subtitle: "Official Attempt by LIC Agents",
+      description: "The most insurance policies sold in 24 Hours is 5,88,107. Acheived by LIC of India on 20 January 2025.",
+      badge: "Guinness World Record",
+      image: guinness,
+      alt: "Guinness World Record - Most Insurance Policies Sold in 24 Hours",
       gradient: "from-gold/15 via-white/95 to-navy/15",
       borderColor: "border-gold/20"
     }
@@ -77,7 +89,7 @@ const HeroSection = () => {
               30+ Years of
               <span className="block text-gold">Securing Lives</span>
               <span className="block text-lg md:text-xl font-normal text-white/90 mt-2">
-                2000+ Families Protected
+                3000+ Families Protected
               </span>
             </h1>
             
@@ -98,7 +110,7 @@ const HeroSection = () => {
               <div className="text-center">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <Users className="w-6 h-6 text-gold" />
-                  <span className="text-3xl font-bold">2000+</span>
+                  <span className="text-3xl font-bold">3000+</span>
                 </div>
                 <p className="text-white/80">Families Secured</p>
               </div>

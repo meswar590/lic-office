@@ -149,7 +149,7 @@ const TestimonialsSection = () => {
         {/* Trust Indicators */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           <div className="text-center">
-            <div className="text-3xl font-bold text-navy mb-2">2000+</div>
+            <div className="text-3xl font-bold text-navy mb-2">3000+</div>
             <div className="text-navy/70">Happy Families</div>
           </div>
           <div className="text-center">

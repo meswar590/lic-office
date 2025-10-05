@@ -55,7 +55,7 @@ const AboutSection = () => {
                 In an industry where products matter, I believe relationships matter more. Every 
                 policy I recommend is not just an investment; it's a promise to stand by your 
                 family when they need it most. This philosophy has earned me the trust of over 
-                2000 families and recognition through 100+ awards.
+                3000 families and recognition through 100+ awards.
               </p>
               <p>
                 My approach is simple: listen first, understand deeply, and recommend wisely. 
@@ -80,7 +80,7 @@ const AboutSection = () => {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-navy font-bold">2K+</span>
+                    <span className="text-navy font-bold">3K+</span>
                   </div>
                   <div>
                     <div className="font-semibold text-navy">Families Protected</div>
