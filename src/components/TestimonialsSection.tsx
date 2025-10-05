@@ -153,7 +153,7 @@ const TestimonialsSection = () => {
             <div className="text-navy/70">Happy Families</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-navy mb-2">₹50Cr+</div>
+            <div className="text-3xl font-bold text-navy mb-2">₹10Cr+</div>
             <div className="text-navy/70">Claims Settled</div>
           </div>
           <div className="text-center">

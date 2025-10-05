@@ -80,9 +80,15 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left text-white">
-            <div className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <Award className="w-5 h-5 text-gold" />
-              <span className="text-gold font-medium">100+ Awards Winner</span>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <div className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Award className="w-5 h-5 text-gold" />
+                <span className="text-gold font-medium">100+ Awards Winner</span>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Crown className="w-5 h-5 text-gold" />
+                <span className="text-gold font-medium">Managing 100Cr+ SumAssured</span>
+              </div>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">

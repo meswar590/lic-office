@@ -55,7 +55,7 @@ const AboutSection = () => {
                 In an industry where products matter, I believe relationships matter more. Every 
                 policy I recommend is not just an investment; it's a promise to stand by your 
                 family when they need it most. This philosophy has earned me the trust of over 
-                3000 families and recognition through 100+ awards.
+                3000 families and recognition through 100+ awards. And we are managing 100Cr+ SumAssured.
               </p>
               <p>
                 My approach is simple: listen first, understand deeply, and recommend wisely. 

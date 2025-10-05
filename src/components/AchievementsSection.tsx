@@ -335,7 +335,7 @@ const AchievementsSection = () => {
     { number: "100+", label: "Awards Won", icon: <Trophy className="w-8 h-8 text-gold" /> },
     { number: "30+", label: "Years Experience", icon: <Medal className="w-8 h-8 text-gold" /> },
     { number: "3000+", label: "Families Secured", icon: <Star className="w-8 h-8 text-gold" /> },
-    { number: "₹50Cr+", label: "Claims Settled", icon: <Crown className="w-8 h-8 text-gold" /> }
+    { number: "₹10Cr+", label: "Claims Settled", icon: <Crown className="w-8 h-8 text-gold" /> }
   ];
 
   return (
